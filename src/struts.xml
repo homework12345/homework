@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.devMode" value="true" />
+	<!--Struts2中Action对象的创建交给spring完成 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.ui.templateDir" value="template" />
+	<constant name="struts.ui.templateSuffix" value="ftl" />
+<package name="default" extends="struts-default">  <!-- 注意此包的写法 -->
+         <!-- 配置一个拦截器 -->
+	     <interceptors>
+	        <!-- 拦截器对应的class是 com.home.util.LoginInterceptors-->   
+	        <interceptor name="LoginInterceptors" class="com.home.util.LoginInterceptors">
+	           <!-- excludeName 是例外的action，也就是下面这几个action不会被拦截--> 
+	           <param name="excludeName">user_login,user_reg</param>
+	           <!-- user可以作为参数传递，取自session.put("user", db_user);中的这个user-->
+	           <param name="sessionName">user</param>
+	        </interceptor>    
+	        <!-- 定义拦截器-栈，用来放拦截器，其中LoginInterceptors是登录拦截器，也就是我们自定义的这个拦截器，
+	             defaultStack是struts默认拦截器，必须加上，否则struts自带的很多功能就没法用，比如传参--> 
+	        <interceptor-stack name="myInterceptors">
+	           <interceptor-ref name="defaultStack"></interceptor-ref>   
+	           <interceptor-ref name="LoginInterceptors"/>                  
+	        </interceptor-stack>      
+	     </interceptors>
+	     <!-- 将上面的拦截器栈作为这个工程的拦截器，也就是自定义的登录拦截器和 struts默认拦截器都起作用-->
+	     <default-interceptor-ref name="myInterceptors"></default-interceptor-ref>
+	     <!-- 适用于所有的action -->
+	     <global-results>
+	          <result name="login" type="redirect">/user_login.jsp</result>
+	          <result name="success" type="redirect">${prePage}</result> 
+	     </global-results>
+     </package>
+	<package name="book" namespace="/book" extends="default">
+		<action name="book_*" class="bookAction" method="{1}">
+		<!-- 	<result name="message" type="chain">
+			<param name="actionName">write_addWrite</param>
+				<param name="namespace">/write</param>
+				<param name="param1">${book.bookid}</param>
+				<param name="param2">${author.authorname}</param>
+			</result> -->
+			<result name="message">/fabiao.jsp</result>
+			<result name="show_view">/main.jsp</result>
+			<result name="detail_view">/detail.jsp</result>
+			<result name="edit_view">/editbook.jsp</result>
+			<result name="delete_message">/delete_message.jsp</result>
+			<result name="edit_message">/edit_message.jsp</result>
+			<result name="input">/add_jsp.jsp</result>
+			<result name="success">/detail.jsp</result>
+		</action>
+	</package>
+	<package name="author" namespace="/author" extends="default">
+		<action name="author_*" class="authorAction" method="{1}">
+			 <result name="success" type="chain">
+				 <param name="actionName">book_showBook</param>
+				<param name="namespace">/book</param>
+				<param name="param1">${author.authorname}</param>
+			</result>
+			<result name="input" >/author_login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="user" namespace="/user" extends="default">
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="success" type="chain">
+				<param name="actionName">book_showBook</param>
+				<param name="namespace">/book</param>
+				<param name="param1">${user.username}</param>
+			</result>
+			<result name="input">/user_login.jsp</result>
+		</action>
+	</package>
+	
+	 <package name="order" namespace="/order" extends="default" >
+        <action name="order_*" class="orderAction" method="{1}">
+            <result name="order_message">/order_message.jsp</result>
+            <result name="show_view">/order_list.jsp</result>
+            <result name="detail_view">/order_detail.jsp</result>
+        </action>  
+	 </package> 
+	 
+	 <package name="write" namespace="/write" extends="default" >
+        <action name="write_*" class="writeAction" method="{1}">
+            <result name="write_message">/write_message.jsp</result>
+            <result name="show_view">/write_show.jsp</result>
+            <result name="detail_view">/write_detail.jsp</result>
+        </action>  
+	 </package> 
+</struts>
+

@@ -1,0 +1,90 @@
+body{
+	font-family:"Microsoft Yahei",Î¢ÈíÑÅºÚ,"Helvetica Neue",Arial,sans-serif;
+	font-size:16px;
+}
+a{
+	color: #777;
+	text-decoration:none;
+}
+a:focus,
+a:hover {
+	color: #b00;
+}
+header{
+	background:#fcfcfc;
+	height:120px;
+}
+header .account{
+	padding-right:200px;
+	text-align:right;
+	line-height: 40px;
+	color:white;
+	height:40px;
+	background:#31a8e6;
+	
+}
+header .account>a{
+	float:right;
+	padding-right:50px;
+	line-height: 40px;
+	color:white;
+	
+}
+header .logo{
+	height:80px;
+	background: url(../images/logo.png) left center no-repeat;
+}
+
+main{
+	margin-top:10px;
+}
+
+main .search-go{
+	float:right;
+	margin-right:200px;
+	padding:4px 15px;
+	font-family:"Microsoft Yahei",Î¢ÈíÑÅºÚ,"Helvetica Neue",Arial,sans-serif;
+	border:1px solid white;
+	border-radius:3px;
+	font-size:14px;
+	color:white;
+	background:#31a8e6;
+	
+}
+
+main .search-go:hover{
+	
+	background:#3190e6;
+	
+}
+main .search{
+	
+	float:right;
+	margin-right:20px;
+	border:2px solid #31a8e6;
+	border-radius:5px;
+	font-size:14px;
+	height:24px;
+	width:200px;
+	
+	
+}
+
+main table{
+	
+	margin:0 auto;
+	border:2px solid #31a8e6;
+	width:80%;
+	
+}
+main table th{
+	
+	height:50px;
+	
+}
+main table td{
+	
+	text-align:center;
+	height:100px;
+}
+
