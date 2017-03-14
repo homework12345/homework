@@ -28,5 +28,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      <p>小说：<s:property value="order.book.bookname"></s:property></p>
      <p>单价：<s:property value="order.book.unitprice"></s:property></p>
      <p>正文：<s:property value="order.book.context"></s:property></p>
+     <a href="main.jsp">去主页看书</a>
   </body>
 </html>
