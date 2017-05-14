@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>写书【作者】</title>
+    <title>作者写书</title>
     <meta charset="utf-8">
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		      <s:form action="book/book_addBook" cssClass="form-horizontal" method="post">
 		       <div class="panel panel-success">
 			       <div class="panel-heading">
-		               <h4 class="panel-title"> <i class="fa fa-cutlery"></i> 添 加 书 籍</h4>
+		               <h4 class="panel-title"> <i class="fa fa-cutlery"></i> 添 加 你的书 籍</h4>
 		           </div>
 		           <div class="panel-body">
 				       <div class="form-group">
