@@ -57,16 +57,5 @@ public class OrderDao {
 	    	List orderList = q.list();
 	    	return (ArrayList<Order>) orderList;
 	    }
-	 @Transactional(propagation=Propagation.NOT_SUPPORTED)
-	 public ArrayList<Order> queryOrderInfo(User user) {
-	    	Session s = factory.getCurrentSession();
-	    	String hql = "From Order order where 1=1";
-	    	if(null != user && user.getUserid()!=0) 
-	    		hql = hql + " and order.user.userid = '" + user.getUserid() + "'";
-	    	System.out.println("user"+user);
-	    	Query q = s.createQuery(hql);
-	    	List orderList = q.list();
-	    	return (ArrayList<Order>) orderList;
-	    }
-	 
+	
 }

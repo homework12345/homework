@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body{
+	font-family:"Microsoft Yahei",微软雅黑,"Helvetica Neue",Arial,sans-serif;
+	font-size:16px;
+	
+}
+
+a{
+	color: #777;
+	text-decoration:none;
+}
+a:focus,
+a:hover {
+	color: #b00;
+	text-decoration:none;
+}
+
+.h{
+	
+	margin:0 auto;
+}
+
+
+	
+
+
+

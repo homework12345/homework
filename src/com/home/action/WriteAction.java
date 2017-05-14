@@ -99,10 +99,7 @@ public class WriteAction extends ActionSupport{
     	writeList = writeDao.QueryWriteInfo(author, book);
         return "show_view";
     }
-    public String queryAuthorWrite() throws Exception {
-    	writeList = writeDao.QueryWriteInfo(author);
-        return "show_view";
-    }
+
 	/*显示所有write*/
     public String showWrite() {
         //将系统设定为用户名不重复，因此在系统中查询到第一个该名称用户即可

@@ -20,13 +20,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	<link type="text/css" rel="stylesheet" href="css/detail.css">
   </head>
   
   <body>
+   <div class="container">
+     <aside>
+       <img src="<%=basePath%><c:out value="${book.picture}"></c:out>"></img>
+       </aside>
+    <section>
+         
      <p>订单号：<s:property value="order.orderid"></s:property></p>
      <p>读者：<s:property value="order.user.username"></s:property></p>
      <p>小说：<s:property value="order.book.bookname"></s:property></p>
      <p>单价：<s:property value="order.book.unitprice"></s:property></p>
      <p>正文：<s:property value="order.book.context"></s:property></p>
+     </section>
+     </div>
   </body>
 </html>

@@ -1,0 +1,24 @@
+body{margin:0;
+     padding:0;
+	 background:#eee;
+	 font-family:"Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+	 font-size:16px;
+}
+a{
+	text-decoration:none;
+}
+.container{
+	width:90%;
+	height:auto;
+	margin:5px auto;
+	
+}
+.container aside{
+	margin:10px 0;
+	padding-top:20px;
+	width:25%;
+	height:600px;
+	text-align:center;
+	font-size:14px;
+	float:left;
+}

@@ -21,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <s:textfield name="book.booktype" placeholder="类型"></s:textfield><br>
    <s:textfield name="book.bookwenan" placeholder="文案"></s:textfield><br>
    <s:textfield name="book.context" placeholder="内容"></s:textfield><br>
-   <s:textfield name="book.unitprice" placeholder="单价"></s:textfield><br>        
+   <s:textfield name="book.unitprice" placeholder="单价"></s:textfield><br>   
    <s:submit value="提交"></s:submit>
    </s:form>
   </main>

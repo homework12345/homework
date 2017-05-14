@@ -82,6 +82,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        </c:forEach>
 	      </table>
 	    </s:form>
+	    <s:iterator value="bookList" status="status">
+	    
+	    </s:iterator>
 	</main>
   </body>
 </html>

@@ -57,15 +57,5 @@ public class WriteDao {
 	    	List writeList = q.list();
 	    	return (ArrayList<Write>) writeList;
 	} 
-	 public ArrayList<Write> QueryWriteInfo(Author author) {
-	    	Session s = factory.getCurrentSession();
-	    	String hql = "From Write write where 1=1";
-	    	if(null != author && author.getAuthorid()!=0) 
-	    		hql = hql + " and write.author.authorid ='" + author.getAuthorid() + "'";
-	    	System.out.println("author"+author);
-	    	Query q = s.createQuery(hql);
-	    	List writeList = q.list();
-	    	return (ArrayList<Write>) writeList;
-	} 
 }
 

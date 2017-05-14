@@ -93,10 +93,4 @@ public class OrderAction extends ActionSupport{
     	orderList = orderDao.queryOrderInfo(user,book);
         return "show_view";
     }
-    public String queryUserOrder() throws Exception {
-    	orderList = orderDao.queryOrderInfo(user);
-        return "show_view";
-    }
-    
-
 }

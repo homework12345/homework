@@ -1,24 +1,20 @@
 #MyEclipse Hibernate Properties
-#Mon Apr 10 20:33:30 CST 2017
+#Tue May 09 12:09:52 CST 2017
+genBasicCompId=false
 sessionFactoryName=
-genBasicCompId=true
 profile=
 daoSFId=
-version=3.3
 jndiPath=
 detectM2M=false
 reStrategyClass=
 detectO2O=false
 springDaoFile=
 useJavaTypes=true
-keyGenerator=assigned
-libInstallFolder=<no jars/zips in selected libraries>
-addLibs2Project=true
+keyGenerator=
 genVersionTag=false
 sessionFactoryId=
 basePersistenceClass=
-genAnnotations=true
-reSettingsFile=/homework3/hibernate.reveng.xml
+genAnnotations=false
+reSettingsFile=/food/hibernate.reveng.xml
 configFile=/homework/src/hibernate.cfg.xml
 createConfigFile=true
-addLibs2Classpath=true
