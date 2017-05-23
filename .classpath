@@ -49,5 +49,6 @@
 	<classpathentry kind="lib" path="E:/somethingusefulnow/lib/slf4j-1.6.6.zip"/>
 	<classpathentry kind="lib" path="E:/somethingusefulnow/lib/slf4j-api-1.5.2.jar"/>
 	<classpathentry kind="lib" path="E:/somethingusefulnow/lib/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="E:/laji/servlet-api.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
