@@ -23,7 +23,48 @@
 			<generator class="increment"></generator>
 		</primary-key>
 	</table>
-<table name="t_write" catalog="giel" class="com.home.model.Write">
+	<table name="t_write" catalog="giel" class="com.home.model.Write">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_author" catalog="gielnew"
+		class="com.home.model.Author">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_book" catalog="gielnew"
+		class="com.home.model.Book">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_order" catalog="gielnew"
+		class="com.home.model.Order">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_user" catalog="gielnew"
+		class="com.home.model.User">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_write" catalog="gielnew"
+		class="com.home.model.Write">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="t_chaper" catalog="giel"
+		class="com.home.model.Chapter">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+<table name="t_comment" catalog="giel" class="com.home.model.Comment">
 	<primary-key>
 		<generator class="increment"></generator>
 	</primary-key>
